@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
 	Box,
 	Container,
@@ -27,6 +27,7 @@ import {
 import { styled } from "@mui/material/styles";
 import AddIcon from "@mui/icons-material/Add";
 import axios from "axios";
+import "./App.css";
 
 const StyledContainer = styled(Container)({
 	marginTop: "2rem",
@@ -135,13 +136,7 @@ const App = () => {
 	};
 
 	return (
-		<Box
-			sx={{
-				minHeight: "100vh",
-				bgcolor: "background.default",
-				color: "text.primary",
-			}}
-		>
+		<div>
 			<LoadingBackdrop open={isLoading}>
 				<CircularProgress color="inherit" />
 				<Typography variant="h6" sx={{ color: "primary.main" }}>
@@ -373,7 +368,7 @@ const App = () => {
 					</FormContainer>
 				</Dialog>
 			</StyledContainer>
-		</Box>
+		</div>
 	);
 };
 
